@@ -1,6 +1,6 @@
 <template>
-  <div class="component-test">
-    这是测试文件
+  <div :class="elClass" :style="elStyle">
+    <slot></slot>
   </div>
 </template>
 
@@ -11,7 +11,17 @@
       fn && fn(l[i], i)
     }
   }
-  const props = {}
+  // vue props 对象
+  const props = {
+    elClass: {
+      type: [String, Object],
+      default: 'component-plupload'
+    },
+    elStyle: {
+      type: [String, Object]
+    },
+  }
+  // vue methods 对象
   const methods = {
     __creatPluploadInstance () {
       /* 实例化 plupload */
@@ -98,15 +108,13 @@
         PluploadInstance: null
       }
     },
-    created () {
-      // console.log(this.asdf)
-    },
     mounted () {
       // 创建 Plupload 实例
       this.__creatPluploadInstance()
     },
     methods,
     beforeDestroy () {
+      // 销毁 plupload 
       this.destroy()
     }
   }
