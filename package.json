@@ -1,7 +1,7 @@
 {
   "name": "vue-plupload-aj",
-  "version": "1.0.0",
-  "description": "vue component",
+  "version": "1.0.1",
+  "description": "vue component for vue2.x",
   "main": "./dist/index.min.js",
   "scripts": {
     "dev": "NODE_ENV=dev webpack-dev-server --quiet",
