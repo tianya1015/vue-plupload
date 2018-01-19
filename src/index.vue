@@ -108,6 +108,9 @@
         PluploadInstance: null
       }
     },
+    updated () {
+      this.refresh()
+    },
     mounted () {
       // 创建 Plupload 实例
       this.__creatPluploadInstance()
@@ -119,9 +122,3 @@
     }
   }
 </script>
-
-<style>
-.component-test {
-  color: #f60;
-}
-</style>
