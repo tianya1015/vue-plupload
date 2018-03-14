@@ -6,7 +6,7 @@
  * @Last Modified Time: 2018-01-17 15:10:58
  */
 
-//
+// Plupload 参数数组
 export const ListOptionOfPlupload = [
   {
     key: 'url',
